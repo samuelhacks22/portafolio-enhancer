@@ -2,27 +2,7 @@
 
 **DevDash PRO** is a high-performance analytics platform that demonstrates mastery of modern Full Stack architecture. It combines a **"Glassmorphism" design with neon accents** and a **real-time data architecture** to deliver an enterprise-grade user experience.
 
-## "Career-Catapult" Features
-
-This is not a common dashboard. It is a demonstration of advanced engineering:
-
-1.  **Real-Time Architecture**:
-    - Uses **WebSockets (Socket.io)** to stream live telemetry data every 2 seconds.
-    - No page reloads (True SPA).
-    - Efficient handling of high-frequency data streams.
-
-2.  **Premium UI & Micro-interactions**:
-    - **Glassmorphism**: Modern aesthetic with background blurs and transparencies (Apple/Windows 11 style).
-    - **Framer Motion**: Fluid entry animations and state transitions.
-    - **Recharts**: Interactive and responsive data visualization.
-
-3.  **🔧 Robust Engineering (TDD & BDD)**:
-    - Strict **Red-Green-Refactor** cycle for all development.
-    - E2E validation with **Cucumber**.
-    - Total containerization with **Docker** and Docker Compose orchestration.
-
----
-
+--
 ## Tech Stack
 
 ### Frontend (`/client`)
