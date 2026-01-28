@@ -1,72 +1,72 @@
 # DevDash PRO - Enterprise Real-Time Analytics Platform
 
-**DevDash PRO** es una plataforma de análisis de alto rendimiento que demuestra maestría en arquitectura Full Stack moderna. Combina un diseño **"Glassmorphism" con acentos neón** y una arquitectura de **datos en tiempo real** para ofrecer una experiencia de usuario de nivel empresarial.
+**DevDash PRO** is a high-performance analytics platform that demonstrates mastery of modern Full Stack architecture. It combines a **"Glassmorphism" design with neon accents** and a **real-time data architecture** to deliver an enterprise-grade user experience.
 
-## 🚀 Características "Career-Catapult"
+## 🚀 "Career-Catapult" Features
 
-Este no es un dashboard común. Es una demostración de ingeniería avanzada:
+This is not a common dashboard. It is a demonstration of advanced engineering:
 
-1.  **⚡ Arquitectura en Tiempo Real**:
-    - Usa **WebSockets (Socket.io)** para transmitir datos de telemetría en vivo cada 2 segundos.
-    - Sin recargas de página (SPA real).
-    - Manejo eficiente de streams de datos de alta frecuencia.
+1.  **⚡ Real-Time Architecture**:
+    - Uses **WebSockets (Socket.io)** to stream live telemetry data every 2 seconds.
+    - No page reloads (True SPA).
+    - Efficient handling of high-frequency data streams.
 
-2.  **💎 UI Premium & Micro-interacciones**:
-    - **Glassmorphism**: Estética moderna con fondos desenfocados (blur) y transparencias tipo Apple/Windows 11.
-    - **Framer Motion**: Animaciones de entrada fluidas y transiciones de estado.
-    - **Recharts**: Visualización de datos interactiva y responsiva.
+2.  **💎 Premium UI & Micro-interactions**:
+    - **Glassmorphism**: Modern aesthetic with background blurs and transparencies (Apple/Windows 11 style).
+    - **Framer Motion**: Fluid entry animations and state transitions.
+    - **Recharts**: Interactive and responsive data visualization.
 
-3.  **🔧 Ingeniería Robusta (TDD & BDD)**:
-    - Ciclo estricto **Red-Green-Refactor** para todo el desarrollo.
-    - Validación E2E con **Cucumber**.
-    - Contenerización total con **Docker** y orquestación con Docker Compose.
+3.  **🔧 Robust Engineering (TDD & BDD)**:
+    - Strict **Red-Green-Refactor** cycle for all development.
+    - E2E validation with **Cucumber**.
+    - Total containerization with **Docker** and Docker Compose orchestration.
 
 ---
 
-## 🏗 Stack Tecnológico
+## 🏗 Tech Stack
 
 ### Frontend (`/client`)
 
 - **Core**: React 18, TypeScript, Vite.
-- **Estilos**: Tailwind CSS (Configuración personalizada Neon/Glass).
-- **Visualización**: Recharts, Lucide React (Iconografía Vectorial).
-- **Animación**: Framer Motion.
-- **Comunicación**: Socket.io Client.
+- **Styling**: Tailwind CSS (Custom Neon/Glass config).
+- **Visualization**: Recharts, Lucide React (Vector Iconography).
+- **Animation**: Framer Motion.
+- **Communication**: Socket.io Client.
 
 ### Backend Gateway (`/server-node`)
 
 - **Runtime**: Node.js (v20), Express.
 - **Real-time**: Socket.io Server (Dual HTTP/WS Gateway).
-- **Patrón**: API Gateway que agrega y emite datos.
+- **Pattern**: API Gateway that aggregates and emits data.
 
 ### Analytics Engine (`/server-python`)
 
 - **Framework**: Flask (Python 3.9).
-- **Función**: Simulación de inferencia de IA y procesamiento de datos.
+- **Function**: AI inference simulation and data processing.
 
 ---
 
-## 🛠 Instalación y Uso
+## 🛠 Installation & Usage
 
-**Prerrequisitos**: Docker Desktop instalado.
+**Prerequisites**: Docker Desktop installed.
 
-1.  **Iniciar todo el entorno**:
+1.  **Start the entire environment**:
 
     ```powershell
     .\start.bat
     ```
 
-    _O manualmente:_ `docker-compose up --build`
+    _Or manually:_ `docker-compose up --build`
 
-2.  **Acceder Application**:
-    - **Dashboard Principal**: [http://localhost](http://localhost)
+2.  **Access Application**:
+    - **Main Dashboard**: [http://localhost](http://localhost)
     - **API Status**: [http://localhost:3000](http://localhost:3000)
 
-## 🧪 Testing y Calidad
+## 🧪 Testing & Quality
 
-El proyecto cuenta con una suite de pruebas exhaustiva:
+The project has an exhaustive test suite:
 
-| Nivel              | Tecnología               | Comando                             |
+| Level              | Technology               | Command                             |
 | :----------------- | :----------------------- | :---------------------------------- |
 | **Frontend**       | Vitest + Testing Library | `cd client && npm test`             |
 | **Backend Node**   | Jest (Unit/Integration)  | `cd server-node && npm test`        |
@@ -75,14 +75,14 @@ El proyecto cuenta con una suite de pruebas exhaustiva:
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
 ```
 ├── client/                 # React + Vite (Premium UI)
-│   ├── src/components/ui/  # Librería de componentes reutilizables (AnimatedCard, LiveChart)
-│   └── src/App.tsx         # Entry point modificado
+│   ├── src/components/ui/  # Reusable component library (AnimatedCard, LiveChart)
+│   └── src/App.tsx         # Modified entry point
 ├── server-node/            # Node.js API + Socket.io Server
 ├── server-python/          # Python Flask Analytics
-├── docker-compose.yml      # Orquestación de contenedores
+├── docker-compose.yml      # Container orchestration
 └── .github/workflows/      # CI/CD Pipeline
 ```
