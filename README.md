@@ -2,16 +2,16 @@
 
 **DevDash PRO** is a high-performance analytics platform that demonstrates mastery of modern Full Stack architecture. It combines a **"Glassmorphism" design with neon accents** and a **real-time data architecture** to deliver an enterprise-grade user experience.
 
-## 🚀 "Career-Catapult" Features
+## "Career-Catapult" Features
 
 This is not a common dashboard. It is a demonstration of advanced engineering:
 
-1.  **⚡ Real-Time Architecture**:
+1.  **Real-Time Architecture**:
     - Uses **WebSockets (Socket.io)** to stream live telemetry data every 2 seconds.
     - No page reloads (True SPA).
     - Efficient handling of high-frequency data streams.
 
-2.  **💎 Premium UI & Micro-interactions**:
+2.  **Premium UI & Micro-interactions**:
     - **Glassmorphism**: Modern aesthetic with background blurs and transparencies (Apple/Windows 11 style).
     - **Framer Motion**: Fluid entry animations and state transitions.
     - **Recharts**: Interactive and responsive data visualization.
@@ -23,7 +23,7 @@ This is not a common dashboard. It is a demonstration of advanced engineering:
 
 ---
 
-## 🏗 Tech Stack
+## Tech Stack
 
 ### Frontend (`/client`)
 
@@ -46,7 +46,7 @@ This is not a common dashboard. It is a demonstration of advanced engineering:
 
 ---
 
-## 🛠 Installation & Usage
+## Installation & Usage
 
 **Prerequisites**: Docker Desktop installed.
 
@@ -62,7 +62,7 @@ This is not a common dashboard. It is a demonstration of advanced engineering:
     - **Main Dashboard**: [http://localhost](http://localhost)
     - **API Status**: [http://localhost:3000](http://localhost:3000)
 
-## 🧪 Testing & Quality
+## Testing & Quality
 
 The project has an exhaustive test suite:
 
@@ -75,7 +75,7 @@ The project has an exhaustive test suite:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── client/                 # React + Vite (Premium UI)
