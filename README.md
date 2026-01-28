@@ -1,93 +1,88 @@
-# DevDash - Fullstack Portfolio Enhancer
+# DevDash PRO - Enterprise Real-Time Analytics Platform
 
-**DevDash** is a sophisticated "Developer Dashboard" that aggregates metrics from a Node.js API and a Python Analytics service, displayed on a reactive React frontend. This project demonstrates mastery of the entire stack, including TDD, BDD, Containerization, and CI/CD.
+**DevDash PRO** es una plataforma de análisis de alto rendimiento que demuestra maestría en arquitectura Full Stack moderna. Combina un diseño **"Glassmorphism" con acentos neón** y una arquitectura de **datos en tiempo real** para ofrecer una experiencia de usuario de nivel empresarial.
 
-## 🚀 Quick Start
+## 🚀 Características "Career-Catapult"
 
-**Prerequisites**: Docker Desktop installed.
+Este no es un dashboard común. Es una demostración de ingeniería avanzada:
 
-1.  **Clone the repository**
-2.  **Run the startup script** (Windows):
+1.  **⚡ Arquitectura en Tiempo Real**:
+    - Usa **WebSockets (Socket.io)** para transmitir datos de telemetría en vivo cada 2 segundos.
+    - Sin recargas de página (SPA real).
+    - Manejo eficiente de streams de datos de alta frecuencia.
+
+2.  **💎 UI Premium & Micro-interacciones**:
+    - **Glassmorphism**: Estética moderna con fondos desenfocados (blur) y transparencias tipo Apple/Windows 11.
+    - **Framer Motion**: Animaciones de entrada fluidas y transiciones de estado.
+    - **Recharts**: Visualización de datos interactiva y responsiva.
+
+3.  **🔧 Ingeniería Robusta (TDD & BDD)**:
+    - Ciclo estricto **Red-Green-Refactor** para todo el desarrollo.
+    - Validación E2E con **Cucumber**.
+    - Contenerización total con **Docker** y orquestación con Docker Compose.
+
+---
+
+## 🏗 Stack Tecnológico
+
+### Frontend (`/client`)
+
+- **Core**: React 18, TypeScript, Vite.
+- **Estilos**: Tailwind CSS (Configuración personalizada Neon/Glass).
+- **Visualización**: Recharts, Lucide React (Iconografía Vectorial).
+- **Animación**: Framer Motion.
+- **Comunicación**: Socket.io Client.
+
+### Backend Gateway (`/server-node`)
+
+- **Runtime**: Node.js (v20), Express.
+- **Real-time**: Socket.io Server (Dual HTTP/WS Gateway).
+- **Patrón**: API Gateway que agrega y emite datos.
+
+### Analytics Engine (`/server-python`)
+
+- **Framework**: Flask (Python 3.9).
+- **Función**: Simulación de inferencia de IA y procesamiento de datos.
+
+---
+
+## 🛠 Instalación y Uso
+
+**Prerrequisitos**: Docker Desktop instalado.
+
+1.  **Iniciar todo el entorno**:
 
     ```powershell
     .\start.bat
     ```
 
-    Or using Docker Compose directly:
+    _O manualmente:_ `docker-compose up --build`
 
-    ```bash
-    docker-compose up --build
-    ```
+2.  **Acceder Application**:
+    - **Dashboard Principal**: [http://localhost](http://localhost)
+    - **API Status**: [http://localhost:3000](http://localhost:3000)
 
-3.  **Access the application**:
-    - **Frontend**: [http://localhost](http://localhost)
-    - **Node API**: [http://localhost:3000](http://localhost:3000)
-    - **Python Service**: [http://localhost:5000](http://localhost:5000)
+## 🧪 Testing y Calidad
 
----
+El proyecto cuenta con una suite de pruebas exhaustiva:
 
-## 🏗 Tech Stack & Architecture
-
-### Frontend (`/client`)
-
-- **Framework**: React 18, Vite.
-- **Language**: TypeScript.
-- **Styling**: Tailwind CSS (v3).
-- **Testing**: Vitest (Component Testing).
-
-### Backend Core (`/server-node`)
-
-- **Runtime**: Node.js (v20), Express.
-- **Language**: TypeScript.
-- **Methodology**: Test Driven Development (TDD) + BDD.
-- **Testing**: Jest (Unit), Cucumber (E2E/Behavior).
-
-### Analytics Service (`/server-python`)
-
-- **Framework**: Flask.
-- **Language**: Python 3.9.
-- **Methodology**: Test Driven Development (TDD).
-- **Testing**: Pytest.
-
-### DevOps
-
-- **Containerization**: Docker & Docker Compose.
-- **CI/CD**: GitHub Actions (`.github/workflows/ci.yml`) runs tests on push.
+| Nivel              | Tecnología               | Comando                             |
+| :----------------- | :----------------------- | :---------------------------------- |
+| **Frontend**       | Vitest + Testing Library | `cd client && npm test`             |
+| **Backend Node**   | Jest (Unit/Integration)  | `cd server-node && npm test`        |
+| **Backend Python** | Pytest                   | `cd server-python && pytest`        |
+| **E2E / BDD**      | Cucumber.js              | `cd server-node && npx cucumber-js` |
 
 ---
 
-## 🧪 Testing
-
-This project follows a strict **Red-Green-Refactor** TDD cycle.
-
-| Service      | Test Command                        | Framework |
-| :----------- | :---------------------------------- | :-------- |
-| **Node API** | `cd server-node && npm test`        | Jest      |
-| **Python**   | `cd server-python && pytest`        | Pytest    |
-| **Frontend** | `cd client && npm test`             | Vitest    |
-| **BDD**      | `cd server-node && npx cucumber-js` | Cucumber  |
-
----
-
-## 📂 Project Structure
+## 📂 Estructura del Proyecto
 
 ```
-├── client/              # React Frontend
-├── server-node/         # Node.js API (Core)
-│   ├── src/             # Source code
-│   └── features/        # Gherkin/Cucumber specs
-├── server-python/       # Python Flask Service
-├── .github/workflows/   # CI/CD Configuration
-├── docker-compose.yml   # Orchestration
-└── start.bat            # Convenience script
+├── client/                 # React + Vite (Premium UI)
+│   ├── src/components/ui/  # Librería de componentes reutilizables (AnimatedCard, LiveChart)
+│   └── src/App.tsx         # Entry point modificado
+├── server-node/            # Node.js API + Socket.io Server
+├── server-python/          # Python Flask Analytics
+├── docker-compose.yml      # Orquestación de contenedores
+└── .github/workflows/      # CI/CD Pipeline
 ```
-
-## 🛠 CI/CD Pipeline
-
-The project includes a GitHub Actions workflow that automatically runs:
-
-1.  Node.js Unit Tests
-2.  Python Unit Tests
-3.  Frontend Component Tests
-
-See `.github/workflows/ci.yml` for details.
