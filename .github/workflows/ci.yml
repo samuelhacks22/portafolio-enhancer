@@ -1,0 +1,59 @@
+name: DevDash CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Node.js Service
+    - name: Use Node.js for Backend
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+    - name: Install Node Dependencies
+      run: |
+        cd server-node
+        npm ci
+    - name: Run Node Tests
+      run: |
+        cd server-node
+        npm test
+
+    # Python Service
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+    - name: Install Typescript Dependencies
+      run: |
+        cd server-python
+        pip install -r requirements.txt
+    - name: Run Python Tests
+      run: |
+        cd server-python
+        pytest
+
+    # Frontend
+    - name: Use Node.js for Frontend
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+    - name: Install Frontend Dependencies
+      run: |
+        cd client
+        npm ci
+    - name: Run Frontend Tests
+      run: |
+        cd client
+        npm run test:unit --if-present
+        # Or npx vitest run if script not standardized
+        npx vitest run
