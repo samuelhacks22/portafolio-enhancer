@@ -3,7 +3,7 @@ import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'rec
 import { motion } from 'framer-motion';
 
 interface LiveChartProps {
-  data: any[];
+  data: unknown[];
   color?: string;
 }
 

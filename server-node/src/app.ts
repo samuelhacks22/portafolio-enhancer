@@ -57,5 +57,13 @@ app.get('/api/dashboard', async (req, res) => {
 });
 
 // Export server instead of app for listener
+// Start server if run directly
+const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
 export { app, server };
 export default app;
